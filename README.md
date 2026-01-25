@@ -5,6 +5,12 @@ Proyecto de desarrollo de una API para la gesti√≥n de gastos, usando las librer√
 - Docker y Docker Compose
 - Python 3.8+
 
+### Crear la red Docker (una sola vez)
+`docker network create gastos-net`
+
+### Conectar el contenedor PostgreSQL a la red
+`docker network connect gastos-net postgresql`
+
 ### Construir la imagen
 `docker-compose build`
 
