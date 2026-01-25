@@ -1,9 +1,15 @@
-# Api en FastAPI y PostgreSQL contenerizada
+# Api para gestión de gastos en FastAPI y PostgreSQL contenerizada
 Proyecto de desarrollo de una API para la gestión de gastos, usando las librerías Uvicorn, SQL Alchemy y FastAPI, además teniendo como base de datos PostgreSQL; todo esto contenerizado mediante Docker.
 
 ## Requisitos
 - Docker y Docker Compose
 - Python 3.8+
+
+### Crear la red Docker (una sola vez)
+`docker network create gastos-net`
+
+### Conectar el contenedor PostgreSQL a la red
+`docker network connect gastos-net postgresql`
 
 ### Construir la imagen
 `docker-compose build`
